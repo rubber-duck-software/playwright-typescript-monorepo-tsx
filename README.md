@@ -17,3 +17,11 @@ SyntaxError: Unexpected token '<'
 
 Note: this failure is specific to **JSX fragments**. If the jsx content inside the `common` folder contains
 no jsx fragments, the tests would pass.
+
+## Setting up this Repository
+
+After cloning, run `npm install`.
+
+Now to run the playwright tests, first start the site by running `npm -w site run dev` from the root of the monorepo.
+
+In a separate terminal window run `npm -w site run test` (also from the root of the monorepo). The playwright test will fail.
