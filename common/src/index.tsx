@@ -19,3 +19,7 @@ async function send(content: string) {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   console.log(content);
 }
+
+export function ComputeOrderCost() {
+  return 100;
+}
