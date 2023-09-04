@@ -12,16 +12,15 @@ that the main header displays the correct order cost (a horribly contrived examp
 When the playwright tests execute, they fail with
 
 ```
-SyntaxError: Unexpected token '<'
+Cannot find module '@playwright/test/jsx-runtime'
 ```
 
-Note: this failure is specific to **JSX fragments**. If the jsx content inside the `common` folder contains
-no jsx fragments, the tests would pass.
+Note: this failure is specific to **pnpm monorepos**.
 
 ## Setting up this Repository
 
-After cloning, run `npm install`.
+After cloning, run `pnpm install`.
 
-Now to run the playwright tests, first start the site by running `npm -w site run dev` from the root of the monorepo.
+Now to run the playwright tests, first start the site by running `pnpm --filter=site dev` from the root of the monorepo.
 
-In a separate terminal window run `npm -w site run test` (also from the root of the monorepo). The playwright test will fail.
+Now, using the VS code playwright extension, attempt to execute the playwright test `site/tests/example.spec.ts`. You should see the failure.
